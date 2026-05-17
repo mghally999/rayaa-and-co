@@ -10,22 +10,22 @@ export const metadata = {
 export default function CollectionPage() {
   return (
     <>
-      <section className="pt-40">
+      <section className="pt-32 md:pt-40">
         <div className="wrap">
           <ScrollReveal>
-            <p className="eyebrow mb-8">Edition 01 · Spring/Summer 2026</p>
+            <p className="eyebrow mb-6 md:mb-8">Edition 01 · Spring/Summer 2026</p>
             <h1 className="display max-w-[14ch]">
               The <em className="italic" style={{ color: "var(--maroon)" }}>Collection.</em>
             </h1>
-            <p className="lede mt-10 max-w-[48ch]">
+            <p className="lede mt-8 md:mt-10 max-w-[48ch]">
               {products.length} pieces, hand-finished in our Dubai atelier. Each piece is numbered
               and made in limited quantities — when an edition is gone, it is gone.
             </p>
           </ScrollReveal>
 
           {/* simple filter chips */}
-          <ScrollReveal delay={120} className="mt-16">
-            <div className="flex flex-wrap gap-3">
+          <ScrollReveal delay={120} className="mt-12 md:mt-16">
+            <div className="flex flex-wrap gap-2 md:gap-3">
               {["All", "Jalabiyas", "Abayas", "Accessories", "Bridal"].map((cat, i) => (
                 <button
                   key={cat}

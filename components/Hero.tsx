@@ -31,10 +31,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={root} className="relative overflow-hidden pt-32 md:pt-40 pb-20">
+    <section ref={root} className="relative overflow-hidden pt-28 md:pt-40 pb-16 md:pb-20">
       <HeroCanvas />
 
-      <div className="wrap relative z-10 grid grid-cols-12 gap-6 items-center min-h-[78vh]">
+      <div className="wrap relative z-10 grid grid-cols-12 gap-8 md:gap-6 items-center min-h-[62vh] md:min-h-[78vh]">
         {/* Copy column */}
         <div className="col-span-12 md:col-span-7 lg:col-span-6">
           <p className="hero-eyebrow eyebrow mb-8">A House of Embroidery · Dubai</p>
@@ -75,7 +75,7 @@ export default function Hero() {
         </div>
 
         {/* Image column — model breaks out of the frame */}
-        <div className="col-span-12 md:col-span-5 lg:col-span-6 relative">
+        <div className="col-span-12 md:col-span-5 lg:col-span-6 relative px-2 sm:px-0">
           <div
             className="hero-image-wrap relative mx-auto"
             style={{ aspectRatio: "3/4", maxWidth: "520px" }}
@@ -102,13 +102,13 @@ export default function Hero() {
 
             {/* Floating editorial pills */}
             <div
-              className="hero-meta-pill absolute -left-4 top-6 z-20 px-4 py-2 text-[10px] tracking-[0.22em] uppercase font-medium"
+              className="hero-meta-pill absolute left-1 sm:-left-4 top-4 sm:top-6 z-20 px-3 sm:px-4 py-1.5 sm:py-2 text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-medium"
               style={{ background: "var(--bg)", border: "1px solid var(--rule)", borderRadius: 999 }}
             >
               SS&apos;26 · Edition 01
             </div>
             <div
-              className="hero-meta-pill absolute -right-2 bottom-10 z-20 px-4 py-2 text-[10px] tracking-[0.22em] uppercase font-medium"
+              className="hero-meta-pill absolute right-1 sm:-right-2 bottom-6 sm:bottom-10 z-20 px-3 sm:px-4 py-1.5 sm:py-2 text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-medium"
               style={{ background: "var(--maroon)", color: "var(--bg)", borderRadius: 999 }}
             >
               Made by hand

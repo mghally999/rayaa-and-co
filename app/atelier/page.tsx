@@ -16,16 +16,16 @@ const numbers = [
 export default function AtelierPage() {
   return (
     <>
-      <section className="pt-40">
+      <section className="pt-32 md:pt-40">
         <div className="wrap">
           <ScrollReveal>
-            <p className="eyebrow mb-8">The Atelier</p>
+            <p className="eyebrow mb-6 md:mb-8">The Atelier</p>
             <h1 className="display max-w-[16ch]">
               A house built on <em className="italic" style={{ color: "var(--maroon)" }}>quiet hands.</em>
             </h1>
           </ScrollReveal>
 
-          <div className="split mt-20">
+          <div className="split mt-14 md:mt-20">
             <ScrollReveal>
               <div className="relative" style={{ aspectRatio: "3/4" }}>
                 <Image src="/images/look-06.jpg" alt="Atelier work" fill sizes="(max-width: 900px) 100vw, 50vw" style={{ objectFit: "cover" }} />
@@ -63,7 +63,7 @@ export default function AtelierPage() {
             {numbers.map((n, i) => (
               <ScrollReveal key={n.l} delay={i * 80}>
                 <div>
-                  <div className="font-display text-7xl md:text-8xl" style={{ color: "var(--maroon)" }}>{n.v}</div>
+                  <div className="font-display text-6xl sm:text-7xl md:text-8xl leading-none" style={{ color: "var(--maroon)" }}>{n.v}</div>
                   <p className="mt-3 text-[12px] tracking-[0.22em] uppercase opacity-80 max-w-[18ch]">{n.l}</p>
                 </div>
               </ScrollReveal>

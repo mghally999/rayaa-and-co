@@ -28,7 +28,7 @@ export default function JournalPage() {
         <div className="mt-20 grid gap-y-24">
           {all.map((entry, i) => (
             <ScrollReveal key={entry.title} delay={i * 80}>
-              <article className="grid md:grid-cols-12 gap-8 items-center">
+              <article className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
                 <div className="md:col-span-7 relative" style={{ aspectRatio: "4/3" }}>
                   <Image
                     src={entry.image}
@@ -42,7 +42,7 @@ export default function JournalPage() {
                   <p className="text-[11px] tracking-[0.3em] uppercase opacity-70">{entry.date}</p>
                   <h2 className="h-lg mt-4">{entry.title}</h2>
                   <p className="lede mt-6">{entry.excerpt}</p>
-                  <a className="btn btn-maroon mt-8">Read</a>
+                  <a href="#" className="btn btn-maroon mt-8 inline-flex">Read</a>
                 </div>
               </article>
             </ScrollReveal>

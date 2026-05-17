@@ -24,15 +24,15 @@ export default function HomePage() {
       {/* Featured product grid */}
       <section>
         <div className="wrap">
-          <div className="flex items-end justify-between gap-6 mb-20">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-8 mb-14 md:mb-20">
             <ScrollReveal>
               <p className="eyebrow mb-6">Featured · Edition 01</p>
               <h2 className="h-xl max-w-[18ch]">
                 Pieces from <em className="italic" style={{ color: "var(--maroon)" }}>the house.</em>
               </h2>
             </ScrollReveal>
-            <ScrollReveal delay={150} className="hidden md:block">
-              <a href="/collection" className="btn">View All ({products.length})</a>
+            <ScrollReveal delay={150}>
+              <a href="/collection" className="btn inline-flex">View All ({products.length})</a>
             </ScrollReveal>
           </div>
 
@@ -45,13 +45,13 @@ export default function HomePage() {
       {/* Journal teaser */}
       <section style={{ background: "var(--bg)" }}>
         <div className="wrap">
-          <div className="flex items-end justify-between mb-16">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-8 mb-12 md:mb-16">
             <ScrollReveal>
               <p className="eyebrow mb-6">Journal</p>
               <h2 className="h-xl">Quiet readings.</h2>
             </ScrollReveal>
             <ScrollReveal delay={120}>
-              <a href="/journal" className="btn">All entries</a>
+              <a href="/journal" className="btn inline-flex">All entries</a>
             </ScrollReveal>
           </div>
 

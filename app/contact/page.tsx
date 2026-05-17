@@ -8,16 +8,16 @@ export default function ContactPage() {
   const [sent, setSent] = useState(false);
 
   return (
-    <section className="pt-40">
+    <section className="pt-32 md:pt-40">
       <div className="wrap">
         <ScrollReveal>
-          <p className="eyebrow mb-8">Contact</p>
+          <p className="eyebrow mb-6 md:mb-8">Contact</p>
           <h1 className="display max-w-[14ch]">
             Write to <em className="italic" style={{ color: "var(--maroon)" }}>the atelier.</em>
           </h1>
         </ScrollReveal>
 
-        <div className="split mt-16 items-start">
+        <div className="split mt-12 md:mt-16 items-start">
           <ScrollReveal>
             <div className="relative" style={{ aspectRatio: "4/5" }}>
               <Image
@@ -51,7 +51,7 @@ export default function ContactPage() {
                 </button>
               </form>
 
-              <div className="mt-16 pt-10 grid grid-cols-2 gap-8" style={{ borderTop: "1px solid var(--rule-soft)" }}>
+              <div className="mt-14 md:mt-16 pt-10 grid grid-cols-1 sm:grid-cols-2 gap-8" style={{ borderTop: "1px solid var(--rule-soft)" }}>
                 <div>
                   <p className="eyebrow no-rule mb-3">Visit</p>
                   <p className="text-sm">Atelier by appointment only.<br/>Jumeirah, Dubai · UAE</p>

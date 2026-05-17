@@ -14,7 +14,7 @@ export default function Footer() {
     >
       <div className="wrap">
         {/* Newsletter */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end pb-20" style={{ borderBottom: "1px solid var(--rule-soft)" }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-end pb-16 md:pb-20" style={{ borderBottom: "1px solid var(--rule-soft)" }}>
           <div>
             <p className="eyebrow mb-6">The Letter</p>
             <h3 className="h-lg">
@@ -22,11 +22,12 @@ export default function Footer() {
               <em className="italic" style={{ color: "var(--maroon)" }}>the atelier.</em>
             </h3>
           </div>
-          <form className="flex gap-3 items-stretch" onSubmit={(e) => e.preventDefault()}>
+          <form className="flex flex-col sm:flex-row gap-3 items-stretch" onSubmit={(e) => e.preventDefault()}>
             <input
               type="email"
               placeholder="Your email"
-              className="flex-1 px-5 py-4 text-sm"
+              aria-label="Your email"
+              className="flex-1 px-5 py-4 text-sm w-full"
               style={{
                 background: "var(--bg)",
                 border: "1px solid var(--rule)",
@@ -34,14 +35,14 @@ export default function Footer() {
                 color: "var(--ink)",
               }}
             />
-            <button type="submit" className="btn btn-maroon" style={{ borderRadius: 999 }}>
+            <button type="submit" className="btn btn-maroon justify-center" style={{ borderRadius: 999 }}>
               Subscribe
             </button>
           </form>
         </div>
 
         {/* Link columns */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pt-16">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-x-8 gap-y-12 pt-12 md:pt-16">
           <div className="col-span-2">
             <Logo size={48} />
             <p className="text-sm opacity-80 mt-6 max-w-[36ch]">

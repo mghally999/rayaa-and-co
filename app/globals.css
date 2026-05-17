@@ -109,7 +109,8 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 .wrap {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 var(--gutter);
+  padding-left: max(var(--gutter), env(safe-area-inset-left));
+  padding-right: max(var(--gutter), env(safe-area-inset-right));
 }
 section { padding: var(--section-pad) 0; position: relative; }
 
@@ -252,12 +253,16 @@ section { padding: var(--section-pad) 0; position: relative; }
 }
 .marquee-track {
   display: inline-flex;
-  gap: 4rem;
+  gap: 3rem;
   animation: marquee 36s linear infinite;
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: clamp(18px, 3.4vw, 24px);
 }
-.marquee-track span { display: inline-flex; align-items: center; gap: 4rem; }
+.marquee-track span { display: inline-flex; align-items: center; gap: 3rem; }
+@media (min-width: 768px) {
+  .marquee-track { gap: 4rem; }
+  .marquee-track span { gap: 4rem; }
+}
 .marquee-track .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--maroon); display: inline-block; }
 @keyframes marquee {
   0%   { transform: translateX(0); }
@@ -286,6 +291,9 @@ section { padding: var(--section-pad) 0; position: relative; }
 }
 @media (max-width: 900px) {
   .split { grid-template-columns: 1fr; }
+  /* Cancel the rtl trick used to reverse pairs on desktop so mobile flows naturally */
+  .split[style*="direction: rtl"],
+  .split[style*="direction:rtl"] { direction: ltr !important; }
 }
 
 /* ───────────── Accessibility / motion ───────────── */
@@ -294,3 +302,11 @@ section { padding: var(--section-pad) 0; position: relative; }
 }
 
 ::selection { background: var(--maroon); color: var(--bg); }
+
+/* Better tap-target sizing on small screens */
+@media (max-width: 480px) {
+  .btn { padding: 13px 22px; font-size: 10.5px; }
+}
+
+/* Avoid horizontal overflow from oversized display headings */
+.display, .h-xl, .h-lg { overflow-wrap: anywhere; word-break: normal; }
